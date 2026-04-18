@@ -43,7 +43,7 @@ jobs:
           composer update --prefer-dist --no-progress
       - name: Write OCI private key
         run: |
-          echo "${{ secrets.OCI_PRIVATE_KEY_FILENAME }}" > /home/runner/oci_private_key.pem
+          echo "${{ secrets.OCI_PRIVATE_KEY_CONTENT }}" > /home/runner/oci_private_key.pem
           chmod 600 /home/runner/oci_private_key.pem
       - name: Run test suite
         run: |
